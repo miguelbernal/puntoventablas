@@ -15,16 +15,25 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Entity(name = "roles")
-public class Rol{
+@Entity(name = "usuarios")
+public class Usuario{
     @Id
-    @Column(name = "id_rol")
+    @Column(name = "id_usuario")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @JsonProperty("idRol")
+    @JsonProperty("idUsuario")
     private int idRol;
 
-    @Column(name = "nombre_rol", length = 128)
-    @JsonProperty("nombreRol")
-    private String nombreRol;
+    @Column(name = "nombre_usuario", length = 128)
+    @JsonProperty("nombreUsuario")
+    private String nombreUsuario;
+
+    @Column(name = "usuario_usuario", length = 128)
+    @JsonProperty("usuarioUsuario")
+    private String usuarioUsuario;
+
+    @Column(name = "clave_usuario", length = 128)
+    @JsonProperty("claveUsuario")
+    private String claveUsuario;
+
 
 }
